@@ -11,6 +11,7 @@ import {
   Linkedin,
   Mail,
   Menu,
+  MessageCircle,
   Sparkles,
   X,
   Zap
@@ -388,7 +389,28 @@ export default function Portfolio() {
                 <span className="text-accent">better frontend</span> execution?
               </h2>
 
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <div className="mt-10 grid gap-4 sm:max-w-xl sm:grid-cols-2">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-white/40">Name</p>
+                  <p className="mt-1 text-lg font-bold">Pawan Kumar</p>
+                </div>
+                <a href="https://wa.me/919873033167" target="_blank" rel="noreferrer"
+                  className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-accent hover:bg-accent/10">
+                  <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white/40">
+                    <MessageCircle size={13} /> WhatsApp
+                  </p>
+                  <p className="mt-1 text-lg font-bold transition group-hover:text-accent">+91 98730 33167</p>
+                </a>
+                <a href="mailto:pawankumar.14nov@gmail.com"
+                  className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-accent hover:bg-accent/10 sm:col-span-2">
+                  <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white/40">
+                    <Mail size={13} /> Email
+                  </p>
+                  <p className="mt-1 break-all text-lg font-bold transition group-hover:text-accent">pawankumar.14nov@gmail.com</p>
+                </a>
+              </div>
+
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a href="mailto:pawankumar.14nov@gmail.com"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-4 font-bold text-ink transition-all hover:-translate-y-1 hover:shadow-xl">
                   <Mail size={18} /> Email me
