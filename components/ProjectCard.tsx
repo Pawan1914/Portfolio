@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, ExternalLink } from "lucide-react";
 import type { Project, ProjectCategory } from "@/types/project";
+import { withBasePath } from "@/lib/basePath";
 
 const categoryGradients: Record<
   ProjectCategory,
@@ -61,7 +62,7 @@ function ProjectPreview({ project }: { project: Project }) {
             </span>
           </div>
           <img
-            src={project.image}
+            src={withBasePath(project.image)}
             alt={`${project.title} preview`}
             className="w-full object-cover object-top"
           />

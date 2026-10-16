@@ -18,6 +18,7 @@ import {
 import { useRef, useState } from "react";
 import WorkSection from "@/components/WorkSection";
 import AccessibilityWidget from "@/components/AccessibilityWidget";
+import { withBasePath } from "@/lib/basePath";
 
 const skills = [
   { label: "Frontend", detail: "HTML5, CSS3, JavaScript, TypeScript", icon: "⚡" },
@@ -392,7 +393,7 @@ export default function Portfolio() {
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-4 font-bold text-ink transition-all hover:-translate-y-1 hover:shadow-xl">
                   <Mail size={18} /> Email me
                 </a>
-                <a href="/Pawan%20Kumar%20Resume.pdf" download="Pawan-Kumar-Resume.pdf"
+                <a href={withBasePath("/Pawan%20Kumar%20Resume.pdf")} download="Pawan-Kumar-Resume.pdf"
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-4 font-bold transition-all hover:border-white/50 hover:-translate-y-1">
                   Download resume <ArrowUpRight size={18} />
                 </a>
